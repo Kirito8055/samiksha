@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Bouquet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .bouquet {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+        .bouquet img {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            animation: fadeInZoom 2s forwards;
+        }
+        .new-image {
+            width: 1100px;
+            height: 1100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 5;
+            animation-delay: 3s;
+        }
+        .large-rose {
+            width: 350px;
+            height: 350px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 30;
+            animation-delay: 0s;
+        }
+        .medium-rose {
+            width: 275px;
+            height: 275px;
+            z-index: 20;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        .medium-rose:nth-of-type(2) { animation-delay: 0.2s; }
+        .medium-rose:nth-of-type(3) { animation-delay: 0.4s; }
+        .medium-rose:nth-of-type(4) { animation-delay: 0.6s; }
+        .medium-rose:nth-of-type(5) { animation-delay: 0.8s; }
+        .medium-rose:nth-of-type(6) { animation-delay: 1s; }
+        .medium-rose:nth-of-type(7) { animation-delay: 1.2s; }
+        .medium-rose:nth-of-type(8) { animation-delay: 1.4s; }
+        .medium-rose:nth-of-type(9) { animation-delay: 1.6s; }
+        .new-image:nth-of-type(1) { animation-delay: 2s; }
+
+        .medium-rose:nth-of-type(10),
+        .medium-rose:nth-of-type(11),
+        .medium-rose:nth-of-type(12),
+        .medium-rose:nth-of-type(13),
+        .medium-rose:nth-of-type(14),
+        .medium-rose:nth-of-type(15),
+        .medium-rose:nth-of-type(16) {
+            width: 400px;
+            height: 300px;
+            z-index: 10;
+            animation-delay: 1.8s;
+        }
+
+        /* Circular positioning */
+        .rose1 { top: 0%; left: 50%; }
+        .rose2 { top: 26%; left: 75%; }
+        .rose3 { top: 50%; left: 96%; }
+        .rose4 { top: 75%; left: 75%; }
+        .rose5 { top: 100%; left: 50%; }
+        .rose6 { top: 75%; left: 25%; }
+        .rose7 { top: 50%; left: 3%; }
+        .rose8 { top: 25%; left: 25%; }
+
+        .rose11 { top: 0%; left: 80%; }
+        .rose12 { top: 25%; left: 100%; }
+        .rose13 { top: 70%; left: 90%; }
+        .rose14 { top: 90%; left: 80%; }
+        .rose15 { top: 90%; left: 30%; }
+        .rose16 { top: 70%; left: 10%; }
+        .rose17 { top: 25%; left: 0%; }
+        .rose18 { top: 0%; left: 20%; }
+
+        .pink{
+            width:400px;
+            height: 400px;
+        }
+
+        .yellow{
+            width: 300px;
+            height: 300px;
+        }
+
+        .small{
+            width:200px;
+            height:200px;
+            z-index: 10;
+        }
+
+        .right{
+            width: 200px;
+            height: 200px;
+        }
+
+        @keyframes fadeInZoom {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            localStorage.setItem('oncerose', 'true');
+        };
+    </script>
+</head>
+<body>
+
+
+<div class="bouquet">
+    <!-- The new image that comes in last -->
+    <img src="back.png" alt="New Image" class="new-image">
+    
+    <!-- Large central rose -->
+    <img src="redrose.png" alt="Large Rose" class="large-rose">
+    
+    <!-- Surrounding medium and small roses -->
+    <!-- <img src="pinkrose.png" alt="Rose 1" class="medium-rose rose1 pink">
+    <img src="yellowrose.png" alt="Rose 2" class="medium-rose rose2 yellow">
+    <img src="yellowrose.png" alt="Rose 3" class="medium-rose rose3 yellow">
+    <img src="lightpink.png" alt="Rose 4" class="medium-rose rose4 pink">
+    <img src="yellowrose.png" alt="Rose 5" class="medium-rose rose5 yellow">
+    <img src="pinkrose.png" alt="Rose 6" class="medium-rose rose6 pink">
+    <img src="yellowrose.png" alt="Rose 7" class="medium-rose rose7">
+    <img src="redrose.png" alt="Rose 8" class="medium-rose rose8">
+
+    <img src="redrose.webp" alt="Rose 11" class="medium-rose rose11 small">
+    <img src="redrose.webp" alt="Rose 12" class="medium-rose rose12 small">
+    <img src="yellowrose.png" alt="Rose 13" class="medium-rose rose13 small">
+    <img src="redrose.png" alt="Rose 14" class="medium-rose rose14 small">
+    <img src="redrose.png" alt="Rose 15" class="medium-rose rose15 small">
+    <img src="redrose.webp" alt="Rose 16" class="medium-rose rose16 small">
+    <img src="redrose.webp" alt="Rose 17" class="medium-rose rose17 small">
+    <img src="redrose.webp" alt="Rose 18" class="medium-rose rose18 small"> -->
+
+
+    <img src="redrose.png" alt="Rose 1" class="medium-rose rose1">
+    <img src="redrose.png" alt="Rose 2" class="medium-rose rose2">
+    <img src="redrose.png" alt="Rose 3" class="medium-rose rose3">
+    <img src="redrose.png" alt="Rose 4" class="medium-rose rose4">
+    <img src="redrose.png" alt="Rose 5" class="medium-rose rose5">
+    <img src="redrose.png" alt="Rose 6" class="medium-rose rose6">
+    <img src="redrose.png" alt="Rose 7" class="medium-rose rose7">
+    <img src="redrose.png" alt="Rose 8" class="medium-rose rose8">
+
+    <img src="redrose.png" alt="Rose 11" class="medium-rose rose11" style="height: 200px; width: 200px;">
+    <img src="redrose.png" alt="Rose 12" class="medium-rose rose12" style="height: 200px; width: 200px;">
+    <img src="redrose.png" alt="Rose 13" class="medium-rose rose13 small">
+    <img src="redrose.png" alt="Rose 14" class="medium-rose rose14 small">
+    <img src="redrose.png" alt="Rose 15" class="medium-rose rose15 small">
+    <img src="redrose.png" alt="Rose 16" class="medium-rose rose16 small 1">
+    <img src="redrose.png" alt="Rose 17" class="medium-rose rose17 small">
+    <img src="redrose.png" alt="Rose 18" class="medium-rose rose18 small">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
